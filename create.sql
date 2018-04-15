@@ -20,9 +20,25 @@ CREATE TABLE `SELECT_TABLE` (
   primary key (`Question_ID`)
 );
 
+CREATE TABLE `JUDGE_TABLE` (
+  `Question_ID` varchar(45) NOT NULL,
+  `Question` varchar(100) NOT NULL,
+  `cAnswer` varchar(45) NOT NULL,
+  primary key (`Question_ID`)
+);
+
+CREATE TABLE `SA_TABLE` (
+  `Question_ID` varchar(45) NOT NULL,
+  `Question` varchar(100) NOT NULL,
+  `cAnswer` varchar(1000) NOT NULL,
+  `image_id` varchar(45) NOT NULL,
+  primary key (`Question_ID`)
+);
+
 CREATE TABLE `User_Progress` (
   `NickName` varchar(45) NOT NULL,
   `Select_ID` varchar(45) NOT NULL,
   `Fill_ID` varchar(45) NOT NULL,
+  `Judge_ID` varchar(45) NOT NULL,
   primary key (`NickName`)
 );
